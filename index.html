@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>SVG video mask on text</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="wrapper">
+	<video autoplay playsinline muted loop preload poster="http://i.imgur.com/xHO6DbC.png">
+    <source src="http://mazwai.com/system/posts/videos/000/000/148/preview_mp4/kenji_kawasawa-106_balloons.mp4?1419192915" />
+	</video>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <mask id="mask" x="0" y="0" width="100%" height="100%" >
+        <rect x="0" y="0" width="100%" height="100%" />
+        <text x="92" y="40">Max, Ti amo</text>
+      </mask>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" />
+  </svg>
+</div>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
