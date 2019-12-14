@@ -1,48 +1,121 @@
-.wrapper {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1000px;
+.clip-text {
+  background: url(https://media0.giphy.com/media/l0HlGdXFWYbKv5rby/giphy.gif);
+  background-size: cover;
+  background-position: center;
+  
+  -webkit-background-clip: text;
+  color: transparent; // set to transparent, otherwise won't see the background
+  
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  font-size:98px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  flex-shrink: 0;
 }
-.wrapper video {
-  width: 100%;
-}
-.wrapper svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+
+html, body {
   height: 100%;
-}
-.wrapper svg text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 15px;
-}
-.wrapper svg > rect {
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-}
-.wrapper svg rect {
-  fill: #fff;
 }
 
 body {
-  margin: 60px 50px 0;
+  background-color: purple;
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 16px;
+  line-height: 1.25em;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper:before, .wrapper:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 10px;
+::selection {
+  background-color: #1D1F20;
+  color: #fff;
+}
+
+.container {
   height: 100%;
-  background-color: #fff;
+  padding: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
-.wrapper:before {
-  left: -9px;
+.container.-column {
+  flex-direction: column;
 }
-.wrapper:after {
-  right: -5px;
+
+.-text-center {
+  text-align: center;
+}
+
+h1, h2 {
+  color: #fff;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+.card {
+  background-image: linear-gradient(-154deg, #FFFFFF 0%, #ECEFF2 100%);
+  border-radius: 8px;
+  width: 437px;
+  padding: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 12px 0;
+  min-height: 124px;
+  box-sizing: border-box;
+}
+.card.-small {
+  width: 320px;
+}
+
+.card--title {
+  color: #4A90E2;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card--title:hover {
+  color: #FF4593;
+}
+
+.card--text {
+  color: #4A4A4A;
+  margin: 12px 0 0 0;
+}
+
+.-purple {
+  background-image: linear-gradient(-146deg, #9793FD 0%, #AA20A8 100%);
+}
+
+.-orange {
+  background-image: linear-gradient(-143deg, #FA61C2 0%, #F76B1C 100%);
+}
+
+.-green {
+  background-image: linear-gradient(-144deg, #6AEEC6 0%, #698D28 100%);
+}
+
+.-yellow {
+  background-image: linear-gradient(-134deg, #FFEA9D 0%, #FF9458 100%);
+}
+
+.-blue {
+  background-image: linear-gradient(-143deg, #6180FA 0%, #81C9CC 100%);
+}
+
+.-lilac {
+  background-image: linear-gradient(-144deg, #CCDAFF 0%, #C7B1FF 100%);
 }
